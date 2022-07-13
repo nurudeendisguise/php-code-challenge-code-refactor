@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Items;
+use App\Interfaces\ItemInterface;
 
 /**
  * This class encapsulates and represents the BackStagePasses items.
  */
 
-class BackStagePasses extends Item
+class BackStagePasses extends Item implements ItemInterface
 {
 	public function compute()
 	{

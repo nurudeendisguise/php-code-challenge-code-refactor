@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Items;
+use App\Interfaces\ItemInterface;
 
 /**
  * This class encapsulates and represents the normal items.
  */
 
-class Normal extends Item
+class Normal extends Item implements ItemInterface
 {
 	public function compute()
 	{

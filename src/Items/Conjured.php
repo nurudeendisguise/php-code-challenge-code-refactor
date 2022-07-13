@@ -2,12 +2,14 @@
 
 namespace App\Items;
 
+use App\Interfaces\ItemInterface;
+
 /**
  * This class encapsulates and represents the Conjured items.
  * 
  */
 
-class Conjured extends Item
+class Conjured extends Item implements ItemInterface
 {
 	public function compute()
 	{

@@ -2,11 +2,13 @@
 
 namespace App\Items;
 
+use App\Interfaces\ItemInterface;
+
 /**
  * This class encapsulates and represents the AgeBare items.
  */
 
-class AgedBrie extends Item
+class AgedBrie extends Item implements ItemInterface
 {
 	public function compute()
 	{

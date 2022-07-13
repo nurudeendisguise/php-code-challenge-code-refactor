@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Items;
+
 use App\Interfaces\ItemInterface;
+use App\Traits\DecrementSellIn;
 
 /**
  * This class encapsulates and represents the BackStagePasses items.
@@ -9,10 +11,12 @@ use App\Interfaces\ItemInterface;
 
 class BackStagePasses extends Item implements ItemInterface
 {
+    use DecrementSellIn;
+
 	public function compute()
 	{
-        $this->item->sellIn -= 1;
-
+        $this->reduceSellIn();
+        
         if ($this->item->quality >= 50) return;
 
         if ($this->item->sellIn < 0) {
